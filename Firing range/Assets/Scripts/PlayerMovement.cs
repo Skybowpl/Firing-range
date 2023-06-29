@@ -19,14 +19,16 @@ public class PlayerMovement : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
-        Vector3 move = transform.right * horizontal + transform.forward * vertical; 
+        Vector3 move = transform.right * horizontal + transform.forward * vertical;
         characterController.Move(move * speed * Time.deltaTime);
 
         velocity += Physics.gravity * Time.deltaTime;
 
-        controller.Move(velocity); // Apply Gravity
+        controller.Move(velocity);
 
-        if (controller.isGrounded) velocity = Vector3.zero;
-
+        if (controller.isGrounded)
+        {
+            velocity = Vector3.zero;
+        }
     }
 }
