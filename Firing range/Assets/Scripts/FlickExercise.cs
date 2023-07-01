@@ -9,6 +9,7 @@ public class FlickExercise : MonoBehaviour
     [SerializeField] private float minSpred = -2;
     [SerializeField] private float maxSpred = 2;
     [SerializeField] private float exerciseTime = 5;
+    [SerializeField] private PointsManager pointsManager;
     private float timerEnd;
     public void spawnTarget()
     {
@@ -24,6 +25,7 @@ public class FlickExercise : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+        pointsManager.ResetPoints();
         timerEnd = Time.time + exerciseTime;
         StartChange(false);
         StartCoroutine(StopExercise(exerciseTime));
