@@ -8,7 +8,7 @@ public class Flicktarget : MonoBehaviour
     {
         if(collision.gameObject.tag == "Bullet")
         {
-            GameObject.Find("Points").GetComponent<PointsManager>().AddPoint();
+            gameObject.transform.parent.GetComponent<PointsManager>().AddPoint();
             gameObject.transform.parent.GetComponent<FlickExercise>().spawnTarget();
             Destroy(gameObject);
         }

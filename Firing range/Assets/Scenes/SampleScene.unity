@@ -479,7 +479,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 577694445}
-  - component: {fileID: 577694446}
   m_Layer: 5
   m_Name: Points
   m_TagString: Untagged
@@ -509,19 +508,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
---- !u!114 &577694446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 577694444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dd0fdbbe04bc08429aa707c113b7dcf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointsText: {fileID: 1112440460}
 --- !u!1 &708365240
 GameObject:
   m_ObjectHideFlags: 0
@@ -1527,6 +1513,7 @@ GameObject:
   - component: {fileID: 1724302001}
   - component: {fileID: 1724302000}
   - component: {fileID: 1724301999}
+  - component: {fileID: 1724302004}
   m_Layer: 0
   m_Name: FlickExerciseSpawner
   m_TagString: Untagged
@@ -1551,7 +1538,7 @@ MonoBehaviour:
   minSpred: -2.5
   maxSpred: 2.5
   exerciseTime: 5
-  pointsManager: {fileID: 577694446}
+  pointsManager: {fileID: 1724302004}
 --- !u!135 &1724302000
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1630,6 +1617,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1724302004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724301998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dd0fdbbe04bc08429aa707c113b7dcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointsText: {fileID: 1112440460}
 --- !u!1 &1787351832
 GameObject:
   m_ObjectHideFlags: 0
